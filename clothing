@@ -1,0 +1,235 @@
+`html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الملابس</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">متجر الملابس</h1>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">منتجاتنا</a></li>
+                <li><a href="#about">معلومات عنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- الصفحة الرئيسية -->
+    <header class="hero-section" id="home">
+        <div class="container">
+            <h2>مرحبا بك في متجر الملابس</h2>
+            <p>أفضل مكان لشراء ملابسك الأنيقة بألوان مميزة.</p>
+            <a href="#products" class="btn">تسوق الآن</a>
+        </div>
+    </header>
+
+    <!-- قسم المنتجات -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2>منتجاتنا</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="منتج 1">
+                    <h3>قميص رمادي</h3>
+                    <p>السعر: 50 دولار</p>
+                    <a href="#" class="btn">أضف إلى السلة</a>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="منتج 2">
+                    <h3>بنطال أسود</h3>
+                    <p>السعر: 70 دولار</p>
+                    <a href="#" class="btn">أضف إلى السلة</a>
+                </div>
+                <!-- يمكنك إضافة المزيد من المنتجات هنا -->
+            </div>
+        </div>
+    </section>
+
+    <!-- معلومات عنا -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>معلومات عنا</h2>
+            <p>نحن متجر إلكتروني متخصص في بيع الملابس عالية الجودة بألوان أنيقة وجذابة. هدفنا هو تقديم أفضل تجربة تسوق لعملائنا.</p>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>اتصل بنا</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <textarea name="message" placeholder="رسالتك" required></textarea>
+                <button type="submit" class="btn">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- تذييل -->
+    <footer class="footer">
+        <div class="container">
+            <p>حقوق النشر © 2024 متجر الملابس. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
+
+### 2. ملف `styles.css`
+```css
+/* تنسيقات عامة */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* تنسيق شريط التنقل */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* تنسيق قسم البطل (الرئيسية) */
+.hero-section {
+    background-color: #444;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section .btn {
+    background-color: #666;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* تنسيق قسم المنتجات */
+.products-section {
+    padding: 50px 0;
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+
+.product-card .btn {
+    background-color: #666;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* تنسيق قسم معلومات عنا */
+.about-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-section p {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* تنسيق قسم الاتصال */
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-section .btn {
+    background-color: #666;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* تنسيق التذييل */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
